@@ -1,6 +1,6 @@
 Retorno de questões Quod
 
-<b> 1)	Desenvolva um código, na sua linguagem de preferência, para acessar os dados em seu formato original (XML). Mostre exemplos dessa aplicação em prática e suas premissas utilizadas. <>
+<b> 1)	Desenvolva um código, na sua linguagem de preferência, para acessar os dados em seu formato original (XML). Mostre exemplos dessa aplicação em prática e suas premissas utilizadas. 
 2)	Construa uma aplicação que armazene esses dados em um formato mais conveniente para manipulações analíticas. Explique também os motivos por trás das suas escolhas.
 3)	Quais informações você incluiria no anexo de forma a melhor documentá-lo para novas utilizações?
 4)	Após o uso da aplicação da questão 2), construa consultas SQL que retornem:
