@@ -1,0 +1,11 @@
+Usando a base de dados fictícia (anexo 2), resolva as seguintes questões:
+1)	Quais variáveis você escolheria para seguir adiante em um modelo estatístico? Explique sua abordagem.
+Fiz um notebook (3 - Modelagem.ipynb) com as funções para desenvolvimento dos modelos entre ela utilizei duas funções para escolhar das variaveis:
+from sklearn.linear_model import LogisticRegression - Modelo de regresão para classificação 
+from sklearn.feature_selection import RFE - Função que faz a seleção das melhoores variaveis
+
+2)	Construa um modelo estatístico para discriminar as classes 0 e 1, contidas na coluna resposta. Discorra sobre a estratégia escolhida e sobre os resultados obtidos.
+Após a selecão das variaveis conforme a questão 1 fiz o seguinte passos:
+1 - Dividi a base em 70% para treino e 30% para teste
+2 - Apliquei na base de treino duas funões para modelo (Regreção Linear e Rede Neural)
+3 - Fiz a acuracia para saber qual modelo é melhor
