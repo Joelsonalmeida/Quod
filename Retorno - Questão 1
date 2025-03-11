@@ -1,0 +1,31 @@
+
+1)	Desenvolva um código, na sua linguagem de preferência, para acessar os dados em seu formato original (XML). Mostre exemplos dessa aplicação em prática e suas premissas utilizadas. 
+Para esta questão foi criado um notebook puython que acessa o arquivo e o transforma em um arquivo parquet
+
+2)	Construa uma aplicação que armazene esses dados em um formato mais conveniente para manipulações analíticas. Explique também os motivos por trás das suas escolhas.
+Para esta questão foi criada uma torina com o seguintes passos:
+1 - Arquivo: Tranf_arquivo_xml.bat, faz a transferencia do arquivo xml para um bucket no GCP.
+2 - Arquivo: 1 - executar_python.bat, executa o notebook 1 - Convertendo_xml_Parquet.ipynb responsável pelo o processo sitado na primeira questão que tranforma o xml em parquet.
+3 - Arquivo: 2 - executar_python.bat, faz a execução de um notebook python - 2 - Ingestao_Base_Nova.ipynb responsável pelos processos: 
+    a - Sobir o arquivo parquet para o BigQuery criando uma tabela com o nome Base_Quod_Nova.
+    b - Concatena esta nova tabela a uma já pronta.
+4 - Porque das escolha dos formatos: 
+ a - Parquet - Reduz o custo de processamento e armazenamento de dados além de ser mais facil para armazenar em banco de dados. 
+ b - Bigquery - Custo baixo, Analisa grande volume de dados com rapidez e integração com outras ferramentas .
+OBS. Como exemplo fiz os processo executarem automaticamente a cadas 10 minutos usando o agendador de tarefas do Windos, porém é configural ao período que for necessário.
+
+3)	Quais informações você incluiria no anexo de forma a melhor documentá-lo para novas utilizações?
+Ao invés de documentar em anexo, fiz a documentação no git, alem de melhor acesso por gerar versões para melhor controle de alterações.
+
+4)	Após o uso da aplicação da questão 2), construa consultas SQL que retornem:
+Usei apenas um pedaço do arquivo para fazer a questão dois, por isto acabei sem acesso aos dados necessário mas abaixo fiz uma consulta de como faria para respoder a questão a.
+a.	Uma tabela listando todos os números únicos de contrato de cada CPF junto com a sua respectiva modalidade (única para cada contrato) e, além disso, uma nova coluna contendo a soma de valor contratado de todos os contratos distintos, por modalidade, para cada ID de cliente;
+ SELECT 
+    c.id_cliente,
+    c.cpf,
+    c.numero_contrato,
+    c.modalidade,
+    SUM(c.valor_contratado)
+    FROM contratos
+ORDER BY id_cliente, cpf, numero_contrato,modalidade;
+b.	Para cada ID de cliente, para cada contrato, um indicador se, dentre todas as parcelas, existe alguma não-quitada (em atraso).

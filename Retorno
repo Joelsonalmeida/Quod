@@ -1,8 +1,0 @@
-Retorno de questões Quod
-
-<b> 1)	Desenvolva um código, na sua linguagem de preferência, para acessar os dados em seu formato original (XML). Mostre exemplos dessa aplicação em prática e suas premissas utilizadas. 
-2)	Construa uma aplicação que armazene esses dados em um formato mais conveniente para manipulações analíticas. Explique também os motivos por trás das suas escolhas.
-3)	Quais informações você incluiria no anexo de forma a melhor documentá-lo para novas utilizações?
-4)	Após o uso da aplicação da questão 2), construa consultas SQL que retornem:
-a.	Uma tabela listando todos os números únicos de contrato de cada CPF junto com a sua respectiva modalidade (única para cada contrato) e, além disso, uma nova coluna contendo a soma de valor contratado de todos os contratos distintos, por modalidade, para cada ID de cliente;
-b.	Para cada ID de cliente, para cada contrato, um indicador se, dentre todas as parcelas, existe alguma não-quitada (em atraso).
